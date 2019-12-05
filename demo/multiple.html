@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<meta name="theme-color" content="#000000">
+		<title>Joystick demo</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#joysticka, #joystickb, #joystickd{
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				z-index: 9;
+			}
+			#joystickb{
+				left: 0;
+				bottom: 0;
+			}
+			#joystickd{
+				right: 0;
+				top: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="joysticka" height="150" width="150"></canvas>
+		<canvas id="joystickb" height="150" width="150"></canvas>
+		<canvas id="joystickc" height="150" width="150"></canvas>
+		<canvas id="joystickd" height="150" width="150"></canvas>
+		<script src="../dist/joystick.min.js"></script>
+		<script>
+			initJoystick({
+			el: "joysticka",
+			innerCircleRadius: 30,
+			margin: 20,
+			showPos: true,
+			autoCenter: true,
+			posChnage: function(x, y){
+				/*Do stuff*/
+			}
+		});
+		initJoystick({
+			el: "joystickb",
+			innerCircleClr: "#FF9D00",
+			outerCircleClr: "#FF9D00",
+			innerCircleRadius: 30,
+			margin: 20,
+			showPos: true,
+			posChnage: function(x, y){
+				/*Do stuff*/
+			}
+		});
+		initJoystick({
+			el: "joystickc",
+			innerCircleClr: "#81FF00",
+			outerCircleClr: "#81FF00",
+			innerCircleRadius: 30,
+			margin: 20,
+			showPos: true,
+			posChnage: function(x, y){
+				/*Do stuff*/
+			}
+		});
+		initJoystick({
+			el: "joystickd",
+			innerCircleClr: "#2B32FF",
+			outerCircleClr: "#2B32FF",
+			innerCircleRadius: 30,
+			margin: 20,
+			showPos: true,
+			posChnage: function(x, y){
+				/*Do stuff*/
+			}
+		});
+		</script>
+	</body>
+</html>
