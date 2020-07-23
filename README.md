@@ -5,7 +5,7 @@
 Syntax:
 ```
 initJoystick({
-	el: "joystick",
+	el: "joystick", //id of canvas
 	posChange: function(x, y){
 		/*Do stuff*/
 	}
