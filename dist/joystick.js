@@ -72,7 +72,7 @@ function initJoystick(ops) {
 		var ay = Math.floor(map(jpy, u, height - u, 0, 100));
 		ops.showPos && drawPositions(ax + "%", ay + "%");
 
-		ops.posChnage(ax, ay);
+		ops.posChange(ax, ay);
 	}
 	canvas.ontouchmove = function (e) {
 		var tx = e.touches[0].clientX;
